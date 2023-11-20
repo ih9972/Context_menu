@@ -36,17 +36,23 @@ public class MainActivity extends AppCompatActivity {
      */
     public void calculate(View view) {
         if (!(the_a1.getText().toString().equals("")) && !(the_d.getText().toString().equals(""))) {
-            a1 = Double.parseDouble(the_a1.getText().toString());
-            d = Double.parseDouble(the_d.getText().toString());
+            if(the_a1.getText().toString().equals("-") || the_a1.getText().toString().equals(".")  || the_d.getText().toString().equals("-."))
+                a1 = 0;
+            else
+                a1 = Double.parseDouble(the_a1.getText().toString());
+            if (the_d.getText().toString().equals("-") || the_d.getText().toString().equals(".") || the_d.getText().toString().equals("-."))
+                d = 0;
+            else
+                d = Double.parseDouble(the_d.getText().toString());
             if (rg.getCheckedRadioButtonId() == R.id.radioButton){
-                Intent si = new Intent(this, MainActivity2.class);
+                Intent si = new Intent(this, ShowDataActivity.class);
                 si.putExtra("type_series","arithmetic");
                 si.putExtra("a1",a1);
                 si.putExtra("d",d);
                 startActivity(si);
             }
             else if (rg.getCheckedRadioButtonId() == R.id.radioButton2) {
-                Intent si = new Intent(this, MainActivity2.class);
+                Intent si = new Intent(this, ShowDataActivity.class);
                 si.putExtra("type_series","geometric");
                 si.putExtra("a1",a1);
                 si.putExtra("d",d);

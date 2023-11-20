@@ -12,7 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class MainActivity2 extends AppCompatActivity implements View.OnCreateContextMenuListener{
+public class ShowDataActivity extends AppCompatActivity implements View.OnCreateContextMenuListener{
     String type_of_series;
     double a1,d,sn;
     ListView listV;
@@ -22,7 +22,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnCreateCon
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_show_data);
         info_display = (TextView) findViewById(R.id.info);
         listV = findViewById(R.id.listV);
 
@@ -88,7 +88,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnCreateCon
     }
 
     public void movetocradit(View view) {
-        Intent si2 = new Intent(this, MainActivity3.class);
+        Intent si2 = new Intent(this, CreditsActivity.class);
         startActivity(si2);
     }
 }

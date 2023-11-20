@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context=".ShowDataActivity"
+    tools:ignore="MissingDefaultResource">
 
     <Space
         android:layout_width="0dp"
@@ -15,7 +16,7 @@
         android:id="@+id/listV"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_weight="2.3" />
 
     <Space
         android:layout_width="0dp"
